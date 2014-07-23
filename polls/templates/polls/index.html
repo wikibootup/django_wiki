@@ -1,0 +1,14 @@
+<h1>Template Example</h1>
+<p>this is template example index.html</p>
+
+{% if all_list %}
+	열려있는 투표가 있습니다.
+	<ul>
+	{% for poll in all_list %}
+		<li>{{ poll.question }} at {{ poll.pub_date}}</li>
+	{% endfor %}
+	</ul>
+
+{% else %}
+ 	열려있는 투표가 없습니다.
+{% endif %}
